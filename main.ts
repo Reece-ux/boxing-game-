@@ -1974,6 +1974,7 @@ sprites.onCreated(SpriteKind.gold, function (sprite) {
     gold_bar_var = 1
 })
 info.onLifeZero(function () {
+    game.setGameOverMessage(false, "Train harder, Fight better")
     game.gameOver(false)
 })
 info.onScore(50, function () {
@@ -2034,6 +2035,7 @@ sprites.onDestroyed(SpriteKind.flying_cup, function (sprite15) {
     cup_var = 0
 })
 controller.combos.attachCombo("Up Up Down Down Left Right Left Right B A", function () {
+    game.setGameOverMessage(true, "Great job, you cheated")
     info.changeScoreBy(1000)
 })
 sprites.onOverlap(SpriteKind.bunger, SpriteKind.bar, function (sprite7, otherSprite6) {
