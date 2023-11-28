@@ -4270,6 +4270,17 @@ game.onUpdateInterval(randint(2000, 4000), function () {
         }
     }
 })
+forever(function () {
+    MakeyMakey.setSimulatorKeymap(
+    MakeyMakey.PlayerNumber.ONE,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.SPACE,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.UP,
+    MakeyMakey.MakeyMakeyKey.S,
+    MakeyMakey.MakeyMakeyKey.G
+    )
+})
 game.onUpdateInterval(randint(1500, 3500), function () {
     if (info.score() >= 30 && info.score() < 40) {
         if ((mean_fist_var_4 || gold_bar_var) == 0) {
