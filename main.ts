@@ -4277,8 +4277,8 @@ forever(function () {
     MakeyMakey.MakeyMakeyKey.SPACE,
     MakeyMakey.MakeyMakeyKey.UP,
     MakeyMakey.MakeyMakeyKey.UP,
-    MakeyMakey.MakeyMakeyKey.S,
-    MakeyMakey.MakeyMakeyKey.G
+    MakeyMakey.MakeyMakeyKey.G,
+    MakeyMakey.MakeyMakeyKey.A
     )
 })
 game.onUpdateInterval(randint(1500, 3500), function () {
