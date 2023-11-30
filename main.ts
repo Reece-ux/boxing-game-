@@ -2077,6 +2077,15 @@ let TimeBetweenPress = 0
 let LastPressed = 0
 music.setVolume(255)
 music.play(music.createSong(assets.song`BgMusic`), music.PlaybackMode.LoopingInBackground)
+MakeyMakey.setSimulatorKeymap(
+MakeyMakey.PlayerNumber.ONE,
+MakeyMakey.MakeyMakeyKey.UP,
+MakeyMakey.MakeyMakeyKey.SPACE,
+MakeyMakey.MakeyMakeyKey.UP,
+MakeyMakey.MakeyMakeyKey.UP,
+MakeyMakey.MakeyMakeyKey.UP,
+MakeyMakey.MakeyMakeyKey.F
+)
 LastPressed = 0
 TimeBetweenPress = 0.0001
 let black_bar2 = sprites.create(img`
@@ -3857,9 +3866,9 @@ cup = sprites.create(img`
     `, SpriteKind.cupe)
 mean_fist2.setPosition(0, 0)
 cup.setPosition(0, 0)
-game.showLongText("X key left hook, Used on soda", DialogLayout.Bottom)
-game.showLongText("Space key Right hook, Used on burger", DialogLayout.Bottom)
-game.showLongText("Down, Dodge Used on punch", DialogLayout.Bottom)
+game.showLongText("B button, left hook, Used on soda", DialogLayout.Bottom)
+game.showLongText("A button, Right hook, Used on burger", DialogLayout.Bottom)
+game.showLongText("D button, Dodge, Used on punch", DialogLayout.Bottom)
 cup.setKind(SpriteKind.cupe)
 mean_fist_var = 0
 mean_fist_var_2 = 0
@@ -4269,17 +4278,6 @@ game.onUpdateInterval(randint(2000, 4000), function () {
             mean_fist2.setPosition(-50, 96)
         }
     }
-})
-forever(function () {
-    MakeyMakey.setSimulatorKeymap(
-    MakeyMakey.PlayerNumber.ONE,
-    MakeyMakey.MakeyMakeyKey.UP,
-    MakeyMakey.MakeyMakeyKey.SPACE,
-    MakeyMakey.MakeyMakeyKey.UP,
-    MakeyMakey.MakeyMakeyKey.UP,
-    MakeyMakey.MakeyMakeyKey.G,
-    MakeyMakey.MakeyMakeyKey.A
-    )
 })
 game.onUpdateInterval(randint(1500, 3500), function () {
     if (info.score() >= 30 && info.score() < 40) {
